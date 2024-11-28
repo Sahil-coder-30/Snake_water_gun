@@ -1,0 +1,153 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: var(--background-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Theme Variables */
+:root {
+    --background-color: #f0f8ff;
+    --text-color: #333;
+    --button-bg: #4caf50;
+    --button-hover: #45a049;
+    --score-bg: #fff;
+}
+
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #eee;
+    --button-bg: #ff5722;
+    --button-hover: #e64a19;
+    --score-bg: #1e1e1e;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Title */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Settings */
+.settings {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.settings button {
+    background: var(--button-bg);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.settings button:hover {
+    background: var(--button-hover);
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background: var(--score-bg);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.score {
+    text-align: center;
+}
+
+.score p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.score span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Choices */
+.choices {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.choice {
+    background: var(--button-bg);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.choice:hover {
+    background: var(--button-hover);
+    transform: scale(1.1);
+}
+
+/* Result */
+.result {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* History */
+.history {
+    list-style: none;
+    padding: 0;
+    max-height: 100px;
+    overflow-y: auto;
+    margin: 10px 0;
+}
+
+.history li {
+    background: var(--score-bg);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Play Again Button */
+.play-again {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: var(--button-bg);
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.play-again:hover {
+    background: var(--button-hover);
+}
